@@ -1,0 +1,68 @@
+/* COMMON */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* WRAPPER */
+.wrapper {
+  height: 100vh;
+  width: 100%;
+}
+
+/* Wrapper - head */
+.wrapper-head {
+  height: 10%;
+  width: 100%;
+  background: #2E3A46;
+  padding: 10px;
+}
+.wrapper-head img {
+  height: 100%;
+}
+
+/* Wrapper - body */ 
+.wrapper-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 100%;
+  background: #1E2D3B;
+}
+.wrapper-body .disc-set {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #2E3A46;
+  height: 35%;
+  width: calc(100% / 7 - 30px);
+  padding: 10px;
+  margin: 10px 20px;
+}
+.wrapper-body .disc-set img {
+  height: 150px;
+  width: 150px;
+}
+.wrapper-body .disc-set .title {
+  text-align: center;
+  font-size: 15px;
+  color: white;
+}
+.wrapper-body .disc-set .author,
+.wrapper-body .disc-set .year {
+  font-size: 12px;
+  color: #808080;
+}
+
+
+
+
+
