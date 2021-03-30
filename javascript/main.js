@@ -14,7 +14,6 @@ const app = new Vue({
         myDiscs : [],
         myGenres : ['All albums'],
         selectedValue : 'All albums',
-        listOrder : 'Prova'
     },
 
     mounted() {
