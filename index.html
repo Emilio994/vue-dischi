@@ -26,7 +26,7 @@
         <!-- Wrapper Body -->
         <div class="wrapper-body">
 
-          <div v-if="myDiscs[index].genre === selectedValue || selectedValue === 'All albums' " v-for='(discs,index) in myDiscs' class="disc-set">
+          <div v-if='selection(index)' v-for='(discs,index) in myDiscs' class="disc-set">
             <img :src="myDiscs[index].poster" alt="Albums">
             <h3 class='title'> {{ myDiscs[index].title }} </h3>
             <div class='author'> {{ myDiscs[index].author  }} </div>

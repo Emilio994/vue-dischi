@@ -14,6 +14,7 @@ const app = new Vue({
         myDiscs : [],
         myGenres : ['All albums'],
         selectedValue : 'All albums',
+        orderedDiscs : []
     },
 
     mounted() {
@@ -22,16 +23,17 @@ const app = new Vue({
         .then(result => {
             result.data.response.forEach(element => {
                 this.myDiscs.push(element);
-            });
-            result.data.response.forEach(element => {
                 if (!this.myGenres.includes(element.genre)) {
                     this.myGenres.push(element.genre)
-                }                
-            })
+                }   
+            });
         })
     },
 
     methods : {
+        selection(index) {
+            if (this.myDiscs[index].genre === this.selectedValue || this.selectedValue === 'All albums') return true;
+        }
 
     }
 })
