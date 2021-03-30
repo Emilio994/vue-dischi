@@ -21,6 +21,9 @@
           <select v-model='selectedValue'>
             <option v-for='(genres, index) in myGenres'> {{ myGenres[index] }}</option>
           </select>
+          <button @click='reloadPage()'> Sort by Default</button>
+          <button @click='sortByYear()'> Sort by Year</button>
+          
         </div>
         <!-- Wrapper Body -->
         <div class="wrapper-body">

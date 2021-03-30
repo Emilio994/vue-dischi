@@ -14,6 +14,7 @@ const app = new Vue({
         myDiscs : [],
         myGenres : ['All albums'],
         selectedValue : 'All albums',
+        orderSelection : '',
     },
 
     mounted() {
@@ -26,14 +27,19 @@ const app = new Vue({
                     this.myGenres.push(element.genre)
                 }
             });
-            this.myDiscs.sort((a, b) => a.year - b.year)
         })
     },
 
     methods : {
         selection(index) {
             if (this.myDiscs[index].genre === this.selectedValue || this.selectedValue === 'All albums') return true;
-        }       
+        },
+        sortByYear() {
+            this.myDiscs.sort((a, b) => a.year - b.year)
+        },
+        reloadPage() {
+            location.reload();
+        }
     }
 })
 

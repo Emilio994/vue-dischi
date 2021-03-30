@@ -17,21 +17,35 @@ body {
 
 /* Wrapper - head */
 .wrapper-head {
+  display: flex;
+  align-items: center;
   height: 10%;
   width: 100%;
   background: #2E3A46;
   padding: 10px;
-  display: flex;
-  flex-flow : column wrap;
-  justify-content: center;
 }
 .wrapper-head img {
   height: 50px;
   width: 50px;
-  align-self: flex-start;
+  margin-right: 10px;
+}
+.wrapper-head button {
+  width: max-content;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #1E2D3B;
+  color: white;
+}
+.wrapper-head button:focus {
+  outline: none;
+}
+.wrapper-head button:active {
+  transform: scale(1.05);
 }
 .wrapper-head select {
-  align-self: flex-end;
+  width: max-content;
   margin-right: 10px;
   border: none;
   padding: 10px;
