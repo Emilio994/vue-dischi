@@ -11,7 +11,9 @@ Vue.config.devtools = true;
 const app = new Vue({
     el : '#root',
     data : {
-        myDiscs : []
+        myDiscs : [],
+        myGenres : ['All albums'],
+        selectedValue : 'All albums',
     },
 
     mounted() {
@@ -20,9 +22,13 @@ const app = new Vue({
         .then(result => {
             result.data.response.forEach(element => {
                 this.myDiscs.push(element);
+            });
+            result.data.response.forEach(element => {
+                if (!this.myGenres.includes(element.genre)) {
+                    this.myGenres.push(element.genre)
+                }                
             })
         })
-        console.log(this.myDiscs);
     },
 
     methods : {
