@@ -18,10 +18,9 @@
         <!-- Wrapper Head -->
         <div class="wrapper-head">
           <img src="img/Spotify_logo.png" alt="Spotify Logo">
-          <select v-model="selectedValue" name="" id="" placeholder="All">
+          <select v-model='selectedValue'>
             <option v-for='(genres, index) in myGenres'> {{ myGenres[index] }}</option>
           </select>
-
         </div>
         <!-- Wrapper Body -->
         <div class="wrapper-body">
